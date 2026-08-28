@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {IProduct} from '../product.model';
 import {CurrencyPipe} from '@angular/common';
 
@@ -9,7 +9,7 @@ import {CurrencyPipe} from '@angular/common';
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent {
-  product : IProduct;
+  product: IProduct;
 
   constructor() {
     this.product = {
@@ -21,5 +21,9 @@ export class ProductDetailsComponent {
       price: 945.0,
       discount: 0.2
     }
+  }
+
+  getImageUrl(product: IProduct) {
+    return `/images/robot-parts/` + product.imageName;
   }
 }

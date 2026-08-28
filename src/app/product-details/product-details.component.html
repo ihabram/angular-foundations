@@ -1,5 +1,5 @@
 <div class="product">
-  <img src="{{`/images/robot-parts/` + product.imageName}}"/>
+  <img [src]="getImageUrl(product)" [alt]="product.name"/>
   <div class="details">
     <div>
       <h2>{{ product.name }}</h2>
