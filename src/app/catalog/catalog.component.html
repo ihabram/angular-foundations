@@ -1,8 +1,7 @@
 <ul>
-    <li>
-        <bot-product-details [product]="products[0]"/>
-    </li>
-    <li>
-        <bot-product-details [product]="products[1]"/>
-    </li>
+    @for (product of products; track product.id) {
+        <li>
+            <bot-product-details [product]="product"/>
+        </li>
+    }
 </ul>
