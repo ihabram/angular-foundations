@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {ProductDetailsComponent} from "../product-details/product-details.component";
 import allProducts from "../products.json"
+import products from "../products.json";
 
 @Component({
   selector: 'bot-catalog',
