@@ -22,7 +22,7 @@ export class ProductDetailsComponent {
 
   addToCart(event: MouseEvent) {
     setTimeout(() => this.availableInventory.update((prior) => prior - 1), 100)
-    this.cartService.removeFromCart(this.product())
+    this.cartService.addToCart(this.product())
   }
 
   getPriceClasses() {

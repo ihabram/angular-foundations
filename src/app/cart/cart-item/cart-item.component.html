@@ -12,6 +12,6 @@
     @if (product().discount > 0) {
       <p>{{ product().price * (1 - product().discount) | currency }}</p>
     }
-    <button class="cta">Remove</button>
+    <button class="cta" (click)="removeFromCart()">Remove</button>
   </div>
 </div>
