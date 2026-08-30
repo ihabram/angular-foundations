@@ -1,12 +1,14 @@
-import { Injectable } from '@angular/core';
+import {computed, Injectable} from '@angular/core';
 import {IProduct} from './product.model';
-import products from "./products.json";
+import {httpResource, HttpResourceRef} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
-  getProducts(): IProduct[] {
-    return products;
+  resource: HttpResourceRef<IProduct[] | undefined> = httpResource(() => 'api/products');
+
+  getProducts() {
+    return computed(() => this.resource.value() ?? []);
   }
 }
